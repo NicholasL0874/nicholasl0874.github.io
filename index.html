@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicholas Linden — EE + Audio (Not Official: Created with Claude)</title>
+<meta name="description" content="Electrical engineering student portfolio — circuits, embedded systems, and audio/music projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scan-overlay" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="#top" class="nav-logo">user<span class="at">@</span>portfolio<span class="colon">:</span>~$</a>
+  <ul class="nav-links">
+    <li><a href="#about">about</a></li>
+    <li><a href="#ee-projects">circuits</a></li>
+    <li><a href="#music-projects">audio</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<header id="top" class="hero">
+  <canvas id="scope" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <p class="eyebrow">// electrical engineering &amp; audio</p>
+    <h1>Hi, I'm <span class="highlight">[Your Name]</span>.</h1>
+    <p class="hero-sub">
+      I build circuits that carry signal and instruments that carry sound —
+      same waveform, two disciplines.
+    </p>
+    <div class="hero-actions">
+      <a href="#ee-projects" class="btn btn-primary">view circuits</a>
+      <a href="#music-projects" class="btn btn-ghost">view audio work</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</header>
+
+<main>
+
+  <section id="about" class="section">
+    <div class="section-head">
+      <p class="tag tag-amber">about</p>
+      <h2>Two signal paths, one engineer</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-copy">
+        I'm an electrical engineering student who spends as much time in KiCAD
+        and control-systems coursework as I do building audio tools in JUCE.
+        This site tracks both — hardware and firmware on one side, DSP and
+        instruments on the other — because the underlying signal theory is
+        the same conversation.
+      </p>
+      <div class="skill-columns">
+        <div class="skill-col">
+          <h3 class="skill-col-title amber">circuits &amp; systems</h3>
+          <ul>
+            <li>KiCAD schematic &amp; PCB design</li>
+            <li>Control systems (root locus, PID, Bode)</li>
+            <li>ESP32 / Raspberry Pi embedded dev</li>
+            <li>Python for data logging &amp; analysis</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3 class="skill-col-title cyan">audio &amp; software</h3>
+          <ul>
+            <li>C++ / JUCE audio applications</li>
+            <li>Real-time DSP &amp; visualization</li>
+            <li>Python automation &amp; tooling</li>
+            <li>Claude API / applied ML experiments</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none" class="divider-svg">
+      <path d="M0,20 L200,20 L220,4 L240,36 L260,4 L280,36 L300,20 L500,20
+               Q560,20 590,4 T650,20 Q680,36 710,4 T770,20 L1200,20"
+            fill="none" stroke="url(#gradLine)" stroke-width="2"/>
+      <defs>
+        <linearGradient id="gradLine" x1="0" x2="1">
+          <stop offset="0%" stop-color="var(--amber)"/>
+          <stop offset="100%" stop-color="var(--cyan)"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <section id="ee-projects" class="section">
+    <div class="section-head">
+      <p class="tag tag-amber">circuits</p>
+      <h2>Electrical &amp; embedded projects</h2>
+    </div>
+    <div class="card-grid">
+
+      <article class="card">
+        <div class="card-meta">KiCAD · Hardware</div>
+        <h3>LED Driver / Breakout Board</h3>
+        <p>Schematic and PCB layout for an Arduino-compatible breakout board,
+           including BOM and gerber export.</p>
+        <div class="card-tags"><span>schematic</span><span>PCB</span><span>gerbers</span></div>
+        <a href="#" class="card-link">view repo →</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta">ESP32 · Python</div>
+        <h3>Sensor Data Logger</h3>
+        <p>Temperature/humidity sensor streamed over serial from an ESP32,
+           logged to CSV and rendered as a live dashboard.</p>
+        <div class="card-tags"><span>UART</span><span>pandas</span><span>live plot</span></div>
+        <a href="#" class="card-link">view repo →</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta">MATLAB / Python</div>
+        <h3>Control Systems Analysis</h3>
+        <p>Root locus, Bode plot, and Ziegler–Nichols PID tuning workups
+           for a feedback control systems course.</p>
+        <div class="card-tags"><span>root locus</span><span>PID</span><span>Bode</span></div>
+        <a href="#" class="card-link">view repo →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="divider divider-flip" aria-hidden="true">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none" class="divider-svg">
+      <path d="M0,20 Q30,4 60,20 T120,20 Q150,36 180,20 T240,20 L400,20
+               L420,4 L440,36 L460,4 L480,36 L500,20 L1200,20"
+            fill="none" stroke="url(#gradLine2)" stroke-width="2"/>
+      <defs>
+        <linearGradient id="gradLine2" x1="0" x2="1">
+          <stop offset="0%" stop-color="var(--cyan)"/>
+          <stop offset="100%" stop-color="var(--amber)"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <section id="music-projects" class="section">
+    <div class="section-head">
+      <p class="tag tag-cyan">audio</p>
+      <h2>Music &amp; DSP projects</h2>
+    </div>
+    <div class="card-grid">
+
+      <article class="card">
+        <div class="card-meta">C++ · JUCE</div>
+        <h3>Real-Time Spectrum Analyzer</h3>
+        <p>Desktop audio visualizer built on JUCE's audio processing graph,
+           rendering live FFT output to a GUI.</p>
+        <div class="card-tags"><span>JUCE</span><span>FFT</span><span>real-time</span></div>
+        <a href="#" class="card-link">view repo →</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta">C++ · MIDI</div>
+        <h3>Step Sequencer</h3>
+        <p>A small drum machine / step sequencer responding to MIDI input,
+           built while learning JUCE's UI framework.</p>
+        <div class="card-tags"><span>JUCE</span><span>MIDI</span><span>UI</span></div>
+        <a href="#" class="card-link">view repo →</a>
+      </article>
+
+      <article class="card">
+        <div class="card-meta">Python · Claude API</div>
+        <h3>AI Chord Suggestion Tool</h3>
+        <p>A MIDI analyzer that reads a progression and uses the Claude API
+           to suggest harmonic continuations.</p>
+        <div class="card-tags"><span>Claude API</span><span>MIDI</span><span>Python</span></div>
+        <a href="#" class="card-link">view repo →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="contact" class="section section-contact">
+    <div class="section-head">
+      <p class="tag tag-amber">contact</p>
+      <h2>Get in touch</h2>
+    </div>
+    <div class="contact-terminal">
+      <div class="terminal-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      <div class="terminal-body">
+        <p><span class="prompt">$</span> cat contact.txt</p>
+        <p class="terminal-line">email:    <a href="mailto:you@example.com">you@example.com</a></p>
+        <p class="terminal-line">github:   <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></p>
+        <p class="terminal-line">linkedin: <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">linkedin.com/in/yourusername</a></p>
+        <p class="terminal-cursor"><span class="prompt">$</span> <span class="cursor-blink">▌</span></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>built with HTML/CSS/JS · deployed on GitHub Pages</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
